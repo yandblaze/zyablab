@@ -1,0 +1,143 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    color: #222;
+    font-size: 40px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    letter-spacing: 4px;
+}
+
+/* Горизонтальное меню */
+.nav {
+    background-color: #333;
+    height: 45px;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    padding: 13px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-right: 1px solid #555;
+}
+
+.nav a:hover {
+    background-color: #555;
+}
+
+/* Обёртка для пункта с выпадашкой */
+.nav div {
+    float: left;
+    position: relative;
+}
+
+/* Выпадающий блок */
+.nav div .drop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #333;
+    z-index: 10;
+}
+
+/* Пункты внутри выпадашки */
+.drop a {
+    float: none;
+    display: block;
+    white-space: nowrap;
+    border-right: none;
+    border-top: 1px solid #555;
+}
+
+/* Показываем выпадашку при наведении на div */
+.nav div:hover .drop {
+    display: block;
+}
+
+/* Левая колонка */
+.left-col {
+    float: left;
+    width: 180px;
+    background-color: #ddd;
+    padding: 15px;
+    min-height: 450px;
+}
+
+/* Правая колонка */
+.right-col {
+    float: right;
+    width: 180px;
+    background-color: #ddd;
+    padding: 15px;
+    min-height: 450px;
+}
+
+/* Центральная колонка */
+.center-col {
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height: 450px;
+    text-align: center;
+}
+
+/* Наплывающие блоки */
+.base {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+}
+
+.base img {
+    width: 100%;
+    height: 100%;
+}
+
+.layer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    transition: top 0.3s;
+}
+
+.base:hover .layer {
+    top: 0;
+}
+
+/* Заголовки боковых колонок */
+.col-title {
+    background-color: #333;
+    color: white;
+    padding: 5px 8px;
+    margin-bottom: 8px;
+}
+
+.footer {
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: white;
+}
